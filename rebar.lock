@@ -1,0 +1,6 @@
+{"1.1.0",
+[{<<"vmstats">>,{pkg,<<"vmstats">>,<<"2.0.0">>},0}]}.
+[
+{pkg_hash,[
+ {<<"vmstats">>, <<"F0B8E83CC4855165381DDBD0AF95913D8C1CF5C41FA366E894EED401808E518C">>}]}
+].

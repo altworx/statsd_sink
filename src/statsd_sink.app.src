@@ -1,0 +1,16 @@
+{application, statsd_sink,
+ [{description, "Companion client to vmstats, also caches values."},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { statsd_sink_app, []}},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
