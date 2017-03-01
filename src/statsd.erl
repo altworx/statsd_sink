@@ -47,15 +47,15 @@ gauge(Key, Value) ->
 
 -spec counter(atom() | iolist() | binary(), number()) -> ok.
 counter(Key, Value) ->
-    gen_server:cast(?SERVER, {counter, Key, Value}).
+    gen_server:cast(?SERVER, {counter, key_to_binary(Key), Value}).
 
 -spec increment(atom() | iolist() | binary()) -> ok.
 increment(Key) ->
-    gen_server:cast(?SERVER, {counter, Key, 1}).
+    gen_server:cast(?SERVER, {counter, key_to_binary(Key), 1}).
 
 -spec timing(atom() | iolist() | binary(), number()) -> ok.
 timing(Key, Value) ->
-    gen_server:cast(?SERVER, {timing, Key, Value}).
+    gen_server:cast(?SERVER, {timing, key_to_binary(Key), Value}).
 
 get_cached() ->
     gen_server:call(?SERVER,get_cached).
